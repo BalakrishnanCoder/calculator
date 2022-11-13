@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- CALCULATOR SECTION -->
+    <div class="colculator_container">
+        <section class="calculator">
+            <div class="title_dark">
+                <h1 class="title">Calculator</h1>
+                <img src="../Calculator/button/toggle-left-solid-24.png" alt="" class="dark_theme" id="icon">
+            </div>
+            <div class="content">
+                <form action="" name="Calculator">
+                    <!-- CALCULATOR DISPLAY -->
+                    <div class="display_container">
+                        <input class="display" type="text" style="color: gray;" name="Input" id="display">
+                    </div>
+                    <!-- CALCULATOR BUTTONS -->
+                    <input class="input_btn clear_btn" type="button" name = "clear"  value=" Clear " OnClick="Calculator.Input.value = ''">
+                    <input class="input_btn" type="button" name="div" value=" / " OnClick="Calculator.Input.value += ' / '"> 
+                    <input class="input_btn" type="button" name = "mul"  value=" * "   
+                    OnClick="Calculator.Input.value += ' * '">
+                    <br>
+
+                    <input class="input_btn" type="button" name = "one"  value=" 1 " OnClick="Calculator.Input.value += '1'">  
+                    <input class="input_btn" type="button" name = "two" value=" 2 " OnCLick="Calculator.Input.value += '2'">  
+                    <input class="input_btn" type="button" name = "three"  value=" 3 " OnClick="Calculator.Input.value += '3'">  
+                    <input class="input_btn" type="button" name = "minus"  value=" - " OnClick="Calculator.Input.value += ' - '">  
+                    <br> 
+
+                    <input class="input_btn" type="button" name = "four"  value=" 4 " OnClick="Calculator.Input.value += '4'">  
+                    <input class="input_btn" type="button" name = "five"  value=" 5 " OnCLick="Calculator.Input.value += '5'">  
+                    <input class="input_btn" type="button" name = "six"  value=" 6 " OnClick="Calculator.Input.value += '6'"> 
+                    <input class="input_btn plus_btn" type="button" name="add" class ="btnTop"  value=" + " 
+                           OnClick="Calculator.Input.value += ' + '">   
+                    
+                    <br>  
+                    <input class="input_btn" type="button" name = "seven"  value=" 7 " OnClick="Calculator.Input.value += '7'">  
+                    <input class="input_btn" type="button" name = "eight" value=" 8 " OnCLick="Calculator.Input.value += '8'">  
+                    <input class="input_btn" type="button" name = "nine"  value=" 9 " OnClick="Calculator.Input.value += '9'">  
+                      
+                    <br>  
+                    <input class="input_btn" type="button" name = "clear"  value=" c " OnClick="Calculator.Input.value = ''">  
+                    <input class="input_btn" type="button" name="zero"  value=" 0 " OnClick="Calculator.Input.value += '0'">  
+                    <input class="input_btn" type="button" name="double_zero"  value=" 00 " OnClick="Calculator.Input.value += '00'">  
+                    <input class="input_btn equl_btn" type="button" name="DoIt"  value=" = " 
+                           OnClick="Calculator.Input.value = eval(Calculator.Input.value)">  
+                     
+                </form>
+            </div>
+        </section>
+    </div>
+        
+    <script>
+        // DARK THEME
+        var icon =document.getElementById("icon");
+        icon.onclick = function(){
+            document.body.classList.toggle("dark_theme");
+            if(document.body.classList.contains("dark_theme")){
+                icon.src = "../Calculator/button/toggle-right-solid-24.png";f
+                icon.style.accentColor;
+            }else{
+                icon.src = "../button/moon-solid-24.png";
+            }
+
+        }
+    </script>          
+                
+</body>
+</html>
